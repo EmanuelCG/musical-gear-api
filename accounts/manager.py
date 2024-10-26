@@ -15,7 +15,7 @@ class UserManager(BaseUserManager):
             email=self.normalize_email(email)
             self.email_validator(email)
         else:
-            raise ValueError(_('an email address is requird'))
+            raise ValueError(_('email address is requird'))
         if not first_name:
             raise ValueError(_('first name is required'))
         if not last_name:
